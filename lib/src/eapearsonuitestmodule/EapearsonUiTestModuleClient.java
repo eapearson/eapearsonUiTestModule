@@ -118,6 +118,23 @@ public class EapearsonUiTestModuleClient {
         this.serviceVersion = newValue;
     }
 
+    /**
+     * <p>Original spec-file function name: run_time_test</p>
+     * <pre>
+     * </pre>
+     * @param   delay   instance of Long
+     * @return   instance of type {@link eapearsonuitestmodule.TestResult TestResult}
+     * @throws IOException if an IO exception occurs
+     * @throws JsonClientException if a JSON RPC exception occurs
+     */
+    public TestResult runTimeTest(Long delay, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+        List<Object> args = new ArrayList<Object>();
+        args.add(delay);
+        TypeReference<List<TestResult>> retType = new TypeReference<List<TestResult>>() {};
+        List<TestResult> res = caller.jsonrpcCall("eapearsonUiTestModule.run_time_test", args, retType, true, false, jsonRpcContext, this.serviceVersion);
+        return res.get(0);
+    }
+
     public Map<String, Object> status(RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         TypeReference<List<Map<String, Object>>> retType = new TypeReference<List<Map<String, Object>>>() {};

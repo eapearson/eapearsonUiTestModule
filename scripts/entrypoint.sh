@@ -1,12 +1,18 @@
 #!/bin/bash
 
-. /kb/deployment/user-env.sh
+#. /kb/deployment/user-env.sh
 
-python ./scripts/prepare_deploy_cfg.py ./deploy.cfg ./work/config.properties
+# python ./scripts/prepare_deploy_cfg.py ./deploy.cfg ./work/config.properties
 
-if [ -f ./work/token ] ; then
-  export KB_AUTH_TOKEN=$(<./work/token)
-fi
+# ls ./work
+
+#if [ -f ./work/token ] ; then
+#  export KB_AUTH_TOKEN=$(<./work/token)
+#fi
+
+echo "In the entry point..."
+
+echo `pwd`
 
 if [ $# -eq 0 ] ; then
   sh ./scripts/start_server.sh

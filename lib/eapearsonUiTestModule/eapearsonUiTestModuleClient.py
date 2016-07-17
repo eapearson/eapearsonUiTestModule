@@ -32,6 +32,16 @@ class eapearsonUiTestModule(object):
             trust_all_ssl_certificates=trust_all_ssl_certificates,
             auth_svc=auth_svc)
 
+    def run_time_test(self, delay, context=None):
+        """
+        :param delay: instance of Long
+        :returns: instance of type "TestResult" -> structure: parameter
+           "message" of String, parameter "elapsed" of Long
+        """
+        return self._client.call_method(
+            'eapearsonUiTestModule.run_time_test',
+            [delay], self._service_ver, context)
+
     def status(self, context=None):
         return self._client.call_method('eapearsonUiTestModule.status',
             [], self._service_ver, context)

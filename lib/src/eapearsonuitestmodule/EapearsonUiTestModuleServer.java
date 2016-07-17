@@ -6,6 +6,7 @@ import java.util.Map;
 import us.kbase.common.service.JsonServerMethod;
 import us.kbase.common.service.JsonServerServlet;
 import us.kbase.common.service.JsonServerSyslog;
+import us.kbase.common.service.RpcContext;
 
 //BEGIN_HEADER
 //END_HEADER
@@ -19,8 +20,8 @@ import us.kbase.common.service.JsonServerSyslog;
 public class EapearsonUiTestModuleServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
-    private static final String gitUrl = "";
-    private static final String gitCommitHash = "";
+    private static final String gitUrl = "https://github.com/eapearson/eapearsonUiTestModule.git";
+    private static final String gitCommitHash = "9215d28dccfe128a4814e54715b767bd868ff379";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -29,6 +30,24 @@ public class EapearsonUiTestModuleServer extends JsonServerServlet {
         super("eapearsonUiTestModule");
         //BEGIN_CONSTRUCTOR
         //END_CONSTRUCTOR
+    }
+
+    /**
+     * <p>Original spec-file function name: run_time_test</p>
+     * <pre>
+     * </pre>
+     * @param   delay   instance of Long
+     * @return   instance of type {@link eapearsonuitestmodule.TestResult TestResult}
+     */
+    @JsonServerMethod(rpc = "eapearsonUiTestModule.run_time_test", async=true)
+    public TestResult runTimeTest(Long delay, RpcContext jsonRpcContext) throws Exception {
+        TestResult returnVal = null;
+        //BEGIN run_time_test
+        returnVal = new TestResult();
+        returnVal.setMessage("It worked?");
+        returnVal.setElapsed(1L);
+        //END run_time_test
+        return returnVal;
     }
     @JsonServerMethod(rpc = "eapearsonUiTestModule.status")
     public Map<String, Object> status() {

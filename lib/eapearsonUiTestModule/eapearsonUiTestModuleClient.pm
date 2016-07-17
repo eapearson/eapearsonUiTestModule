@@ -84,6 +84,94 @@ sub new
 }
 
 
+
+
+=head2 run_time_test
+
+  $return = $obj->run_time_test($delay)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$delay is an int
+$return is an eapearsonUiTestModule.TestResult
+TestResult is a reference to a hash where the following keys are defined:
+	message has a value which is a string
+	elapsed has a value which is an int
+
+</pre>
+
+=end html
+
+=begin text
+
+$delay is an int
+$return is an eapearsonUiTestModule.TestResult
+TestResult is a reference to a hash where the following keys are defined:
+	message has a value which is a string
+	elapsed has a value which is an int
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub run_time_test
+{
+    my($self, @args) = @_;
+
+# Authentication: none
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function run_time_test (received $n, expecting 1)");
+    }
+    {
+	my($delay) = @args;
+
+	my @_bad_arguments;
+        (!ref($delay)) or push(@_bad_arguments, "Invalid type for argument 1 \"delay\" (value was \"$delay\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to run_time_test:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'run_time_test');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearsonUiTestModule.run_time_test",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'run_time_test',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method run_time_test",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'run_time_test',
+				       );
+    }
+}
+ 
   
 sub status
 {
@@ -119,7 +207,7 @@ sub status
 sub version {
     my ($self) = @_;
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-        method => "${last_module.module_name}.version",
+        method => "eapearsonUiTestModule.version",
         params => [],
     });
     if ($result) {
@@ -127,16 +215,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => '${last_method.name}',
+                method_name => 'run_time_test',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method ${last_method.name}",
+            error => "Error invoking method run_time_test",
             status_line => $self->{client}->status_line,
-            method_name => '${last_method.name}',
+            method_name => 'run_time_test',
         );
     }
 }
@@ -170,6 +258,38 @@ sub _validate_version {
 }
 
 =head1 TYPES
+
+
+
+=head2 TestResult
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+message has a value which is a string
+elapsed has a value which is an int
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+message has a value which is a string
+elapsed has a value which is an int
+
+
+=end text
+
+=back
 
 
 

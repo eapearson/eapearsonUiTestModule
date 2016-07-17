@@ -20,6 +20,9 @@ ANT = $(ANT_HOME)/bin/ant
 
 default: compile
 
+install:
+	echo "I am going to install things one day!"
+
 all: compile build build-startup-script build-executable-script build-test-script
 
 compile:

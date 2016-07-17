@@ -1,0 +1,47 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "",
+    "categories": ["active", "util"],
+    "widgets": {
+        "input": null,
+        "output": null
+    },
+    "parameters": [
+        {
+            "id": "delay",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "validate_as": "int",
+            "text_options": {
+                "min_int": 0,
+                "max_int": 1000000
+            }
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearsonUiTestModule",
+            "method": "run_time_test",
+            "input_mapping": [
+                {
+                    "input_parameter": "delay",
+                    "target_argument_position": 0
+                }
+            ],
+            "output_mapping": [
+                {
+                    "input_parameter": "delay",
+                    "target_property": "delay"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
