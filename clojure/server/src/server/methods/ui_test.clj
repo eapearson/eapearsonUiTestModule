@@ -16,7 +16,7 @@
    "name" "test-rpc"})
 
 (defn help [params]
-  "ask me for help, and I'll give it to you.")
+  {"text" "ask me for help, and I'll give it to you."})
 
 (defn run-time-test [params]
    (let [time-to-delay (:delay params)]
