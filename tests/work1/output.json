@@ -1,1 +1,1 @@
-{"result":{"files":["input.json","output.json","token"],"input-data":{"id":"123","method":"my_method","params":{"param1":1,"param2":2},"context":{"prop1":"value1"}}},"is_cancelled":false,"error":null}
+{"result":{"files":["input.json","output.json","token"],"input-data":{"id":"123","method":"my_method","params":{"param1":1,"param2":2},"context":{"prop1":"value1"}}},"is_cancelled":0,"error":null}

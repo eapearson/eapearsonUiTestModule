@@ -17,7 +17,7 @@
       (with-open [writer (io/writer out-file)]
         (json/write `{:result {:input-data ~in-data :files ~files}
                       :error nil
-                      :is_cancelled false} writer)))))
+                      :is_cancelled 0} writer)))))
 
 
   ;; not found, write out error and return
