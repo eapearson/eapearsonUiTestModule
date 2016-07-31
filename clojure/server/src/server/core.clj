@@ -50,7 +50,7 @@
             (print result)
             result)
           (catch Exception e
-            (print (str "caught exception: " (.getMessage e)))))
+            (println (str "caught exception: " (.getMessage e)))))
         ;; (throw (Exception. "The arity-3 version of this service is not supported ... yet"))
         ;; context-file  - is actually the json-rpc payload in a file
         ;; output-file   - name of file in which to provide response
