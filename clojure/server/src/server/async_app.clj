@@ -15,7 +15,9 @@
       (println "files in working dir")
       (println files)
       (with-open [writer (io/writer out-file)]
-        (json/write `{:input-data ~in-data :files ~files} writer))))
+        (json/write `{:result {:input-data ~in-data :files ~files}
+                      :error nil
+                      :is_cancelled false} writer)))))
 
 
   ;; not found, write out error and return
@@ -26,6 +28,3 @@
 
   ;; for now we are just echoing the input back to output, since
   ;; we don't know the format!
-
-
-  (str "You gave me " in-file ", " out-file ", and " token))
