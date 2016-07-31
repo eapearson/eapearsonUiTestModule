@@ -1,1 +1,1 @@
-{"result":{"files":["input.json","output.json","token"],"input-data":{"id":"123","method":"my_method","params":{"param1":1,"param2":2},"context":{"prop1":"value1"}}},"is_cancelled":0,"error":null}
+{"result":{"config":{"prop3":"\"the end of props\"","prop2":"42","prop1":"\"this is prop 1\""},"token":"my_magic_token","files":["config.properties","input.json","output.json","token"],"input-data":{"id":"123","method":"my_method","params":{"param1":1,"param2":2},"context":{"prop1":"value1"}}},"is_cancelled":0,"error":null}
