@@ -20,6 +20,7 @@
 
 (defn run-time-test [params]
    (let [time-to-delay (:delay params)]
+   (print "About to sleep for " time-to-delay)
     (Thread/sleep time-to-delay)
     {"name" "delay"
      "result" "delayed"

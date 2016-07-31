@@ -1,6 +1,8 @@
 (ns server.async-app
   (:require [clojure.data.json :as json])
-  (:require [clojure.java.io :as io]))
+  (:require [clojure.java.io :as io])
+  (:require [me.raynes.fs :as fs]))
+
 
 (defn run
   [in-file out-file token]
@@ -8,9 +10,10 @@
   ;; look for in-file
   (with-open [in (io/reader in-file)]
 
-    (let [in-data (json/read in)]
+    (let [in-data (json/read in)
+          files (map #(.getName %) (fs/list-dir "./work"))]
       (with-open [writer (io/writer out-file :append true)]
-        (json/write in-data writer))))
+        (json/write `(~in-data ~files) writer))))
 
 
   ;; not found, write out error and return

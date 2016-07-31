@@ -13,6 +13,7 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/tools.cli "0.3.4"]
                  [org.clojure/data.json "0.2.6"]
+                 [me.raynes/fs "1.4.6"]
                  [ring/ring "1.5.0"]
                  [ring/ring-jetty-adapter "1.5.0"]
                  [compojure "1.5.1"]])
