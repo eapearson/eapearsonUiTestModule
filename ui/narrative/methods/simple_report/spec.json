@@ -19,10 +19,7 @@
             "input_mapping": [               
             ],
             "output_mapping": [
-                {
-                    "input_parameter": "message",
-                    "target_property": "message"
-                }
+              
             ]
         }
     },
