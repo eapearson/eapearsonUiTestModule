@@ -1,10 +1,14 @@
 (ns server.rpc.json
   (:require [clojure.data.json :as json])
   (:require [server.methods.ui-test :as ui-test])
-  (:require [server.methods.test :as test-methods]))
+  (:require [server.methods.test :as test-methods])
+  (:require [server.methods.small-report :as small-report])
+  (:require [server.methods.medium-report :as medium-report])
+  (:require [server.methods.large-report :as large-report])
+  )
 
 
-;; JSON RPC IMPLEMENTATION
+;; JSON RPC IMPLEMENTATION, ala KBase
 
 (defn validate-header [request]
   (let [content-type (get (get request :headers) "content-type")]
@@ -18,7 +22,11 @@
 
 (def method-map {"test.info" test-methods/info
                  "eapearsonUiTestModule.status" ui-test/status
-                 "eapearsonUiTestModule.run_time_test" ui-test/run-time-test})
+                 "eapearsonUiTestModule.run_time_test" ui-test/run-time-test
+                 "eapearsonUiTestModule.small_report" small-report/generate-small-report
+                 "eapearsonUiTestModule.medium_report" medium-report/generate-medium-report
+                 "eapearsonUiTestModule.large_report" large-report/generate-large-report
+                 })
 
 (defn dispatch [request]
   (let [json (:json-rpc-message request)]

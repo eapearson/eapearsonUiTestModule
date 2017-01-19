@@ -10,7 +10,7 @@
   :ring {:handler server.core/app}
   :main server.core
   :aot [server.core]
-  :dependencies [[org.clojure/clojure "1.9.0-alpha10"]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha14"]
                  [org.clojure/tools.cli "0.3.4"]
                  [org.clojure/data.json "0.2.6"]
                  [me.raynes/fs "1.4.6"]

@@ -1,0 +1,30 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "",
+    "categories": ["active", "util"],
+    "widgets": {
+        "input": null,
+        "output": null
+    },
+    "parameters": [       
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearsonUiTestModule",
+            "method": "large_report",
+            "input_mapping": [               
+            ],
+            "output_mapping": [
+                {
+                    "input_parameter": "message",
+                    "target_property": "message"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}

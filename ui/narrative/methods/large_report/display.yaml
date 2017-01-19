@@ -1,0 +1,38 @@
+#
+# define display information
+#
+name: Large Sized Report
+
+tooltip: |
+    Allows testing with variable run times
+
+description : |
+    This method will pause for a given number of seconds before returning.
+
+    The purpose of this function is to provide a somewhat deterministic way to
+    test function execution from a test environment.
+
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+

@@ -1,0 +1,66 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BaseClient	lib/eapearsonUiTestModule/baseclient.py	/^class BaseClient(object):$/;"	kind:class	line:96
+ConfigParser	scripts/prepare_deploy_cfg.py	/^from ConfigParser import ConfigParser$/;"	kind:namespace	line:5
+Reimport	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    from baseclient import BaseClient as _BaseClient  # @Reimport$/;"	kind:namespace	line:16
+ServerError	lib/eapearsonUiTestModule/baseclient.py	/^class ServerError(Exception):$/;"	kind:class	line:71
+StringIO	scripts/prepare_deploy_cfg.py	/^import StringIO$/;"	kind:namespace	line:6
+Template	scripts/prepare_deploy_cfg.py	/^from jinja2 import Template$/;"	kind:namespace	line:4
+UnusedImport	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    from .baseclient import BaseClient as _BaseClient  # @UnusedImport$/;"	kind:namespace	line:13
+_AJ	lib/eapearsonUiTestModule/baseclient.py	/^_AJ = 'application\/json'$/;"	kind:variable	line:27
+_BaseClient	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    from .baseclient import BaseClient as _BaseClient  # @UnusedImport$/;"	kind:namespace	line:13
+_BaseClient	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    from baseclient import BaseClient as _BaseClient  # @Reimport$/;"	kind:namespace	line:16
+_CT	lib/eapearsonUiTestModule/baseclient.py	/^_CT = 'content-type'$/;"	kind:variable	line:26
+_ConfigParser	lib/eapearsonUiTestModule/baseclient.py	/^    from ConfigParser import ConfigParser as _ConfigParser  # py 2$/;"	kind:namespace	line:18
+_ConfigParser	lib/eapearsonUiTestModule/baseclient.py	/^    from configparser import ConfigParser as _ConfigParser  # py 3$/;"	kind:namespace	line:16
+_JSONObjectEncoder	lib/eapearsonUiTestModule/baseclient.py	/^class _JSONObjectEncoder(_json.JSONEncoder):$/;"	kind:class	line:86
+_URL_SCHEME	lib/eapearsonUiTestModule/baseclient.py	/^_URL_SCHEME = frozenset(['http', 'https'])$/;"	kind:variable	line:28
+__init__	lib/eapearsonUiTestModule/baseclient.py	/^    def __init__($/;"	kind:member	line:120
+__init__	lib/eapearsonUiTestModule/baseclient.py	/^    def __init__(self, name, code, message, data=None, error=None):$/;"	kind:member	line:73
+__init__	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    def __init__($/;"	kind:member	line:21
+__init__.py	lib/eapearsonUiTestModule/__init__.py	1;"	kind:file	line:1
+__str__	lib/eapearsonUiTestModule/baseclient.py	/^    def __str__(self):$/;"	kind:member	line:81
+_call	lib/eapearsonUiTestModule/baseclient.py	/^    def _call(self, url, method, params, context=None):$/;"	kind:member	line:158
+_check_job	lib/eapearsonUiTestModule/baseclient.py	/^    def _check_job(self, service, job_id):$/;"	kind:member	line:210
+_get_service_url	lib/eapearsonUiTestModule/baseclient.py	/^    def _get_service_url(self, service_method, service_version):$/;"	kind:member	line:194
+_get_token	lib/eapearsonUiTestModule/baseclient.py	/^def _get_token(user_id, password, auth_svc):$/;"	kind:function	line:31
+_json	lib/eapearsonUiTestModule/baseclient.py	/^import json as _json$/;"	kind:namespace	line:10
+_os	lib/eapearsonUiTestModule/baseclient.py	/^import os as _os$/;"	kind:namespace	line:13
+_random	lib/eapearsonUiTestModule/baseclient.py	/^import random as _random$/;"	kind:namespace	line:12
+_read_inifile	lib/eapearsonUiTestModule/baseclient.py	/^def _read_inifile(file=_os.environ.get(  # @ReservedAssignment$/;"	kind:function	line:51
+_requests	lib/eapearsonUiTestModule/baseclient.py	/^import requests as _requests$/;"	kind:namespace	line:11
+_set_up_context	lib/eapearsonUiTestModule/baseclient.py	/^    def _set_up_context(self, service_ver=None, context=None):$/;"	kind:member	line:203
+_submit_job	lib/eapearsonUiTestModule/baseclient.py	/^    def _submit_job(self, service_method, args, service_ver=None,$/;"	kind:member	line:213
+_urlparse	lib/eapearsonUiTestModule/baseclient.py	/^    from urllib.parse import urlparse as _urlparse  # py3$/;"	kind:namespace	line:21
+_urlparse	lib/eapearsonUiTestModule/baseclient.py	/^    from urlparse import urlparse as _urlparse  # py2$/;"	kind:namespace	line:23
+baseclient.py	lib/eapearsonUiTestModule/baseclient.py	1;"	kind:file	line:1
+call_method	lib/eapearsonUiTestModule/baseclient.py	/^    def call_method(self, service_method, args, service_ver=None,$/;"	kind:member	line:243
+config	scripts/prepare_deploy_cfg.py	/^    config = ConfigParser()$/;"	kind:variable	line:17
+default	lib/eapearsonUiTestModule/baseclient.py	/^    def default(self, obj):$/;"	kind:member	line:88
+eapearsonUiTestModule	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^class eapearsonUiTestModule(object):$/;"	kind:class	line:19
+eapearsonUiTestModuleClient.py	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	1;"	kind:file	line:1
+file	scripts/prepare_deploy_cfg.py	/^    file = open(sys.argv[1], 'r')$/;"	kind:variable	line:14
+kbase_endpoint	scripts/prepare_deploy_cfg.py	/^        kbase_endpoint = os.environ.get("KBASE_ENDPOINT")$/;"	kind:variable	line:21
+os	scripts/prepare_deploy_cfg.py	/^import os$/;"	kind:namespace	line:2
+os	scripts/prepare_deploy_cfg.py	/^import os.path$/;"	kind:namespace	line:3
+output	scripts/prepare_deploy_cfg.py	/^    output = t.render(props)$/;"	kind:variable	line:31
+path	scripts/prepare_deploy_cfg.py	/^import os.path$/;"	kind:namespace	line:3
+prepare_deploy_cfg.py	scripts/prepare_deploy_cfg.py	1;"	kind:file	line:1
+print_function	lib/eapearsonUiTestModule/baseclient.py	/^from __future__ import print_function$/;"	kind:namespace	line:8
+print_function	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^from __future__ import print_function$/;"	kind:namespace	line:8
+props	scripts/prepare_deploy_cfg.py	/^    props = dict(config.items("global"))$/;"	kind:variable	line:30
+py	lib/eapearsonUiTestModule/baseclient.py	/^    from ConfigParser import ConfigParser as _ConfigParser  # py 2$/;"	kind:namespace	line:18
+py	lib/eapearsonUiTestModule/baseclient.py	/^    from configparser import ConfigParser as _ConfigParser  # py 3$/;"	kind:namespace	line:16
+py2	lib/eapearsonUiTestModule/baseclient.py	/^    from urlparse import urlparse as _urlparse  # py2$/;"	kind:namespace	line:23
+py3	lib/eapearsonUiTestModule/baseclient.py	/^    from urllib.parse import urlparse as _urlparse  # py3$/;"	kind:namespace	line:21
+run_job	lib/eapearsonUiTestModule/baseclient.py	/^    def run_job(self, service_method, args, service_ver=None, context=None):$/;"	kind:member	line:220
+run_time_test	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    def run_time_test(self, delay, context=None):$/;"	kind:member	line:35
+status	lib/eapearsonUiTestModule/eapearsonUiTestModuleClient.py	/^    def status(self, context=None):$/;"	kind:member	line:45
+sys	scripts/prepare_deploy_cfg.py	/^import sys$/;"	kind:namespace	line:1
+t	scripts/prepare_deploy_cfg.py	/^    t = Template(text)$/;"	kind:variable	line:16
+text	scripts/prepare_deploy_cfg.py	/^    text = file.read()$/;"	kind:variable	line:15
+time	lib/eapearsonUiTestModule/baseclient.py	/^import time$/;"	kind:namespace	line:24
