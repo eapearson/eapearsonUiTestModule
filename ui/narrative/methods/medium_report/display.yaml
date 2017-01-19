@@ -34,5 +34,5 @@ suggestions:
 #
 # Configure the display and description of parameters
 #
-parameters :
+parameters : []
 
